@@ -1,0 +1,33 @@
+<div class="container-lista">
+    <h1>Lista de Compras</h1>
+  
+    <form (submit)="addItem()" [formGroup]="formularioAdicao">
+      <input type="text" formControlName="item" placeholder="Adicione um item" class="form-control" />
+      <div *ngIf="formularioAdicao.controls['item'].invalid && formularioAdicao.controls['item'].touched">
+        <small class="text-danger">O item não pode estar vazio</small>
+      </div>
+      <button type="submit" class="btn btn-adicionar" [disabled]="formularioAdicao.invalid">Adicionar</button>
+    </form>
+  
+    <div class="secao-lista">
+      <h2>Itens não comprados</h2>
+      <ul>
+        <li *ngFor="let item of itensNaoComprados">
+          <input type="checkbox" (change)="toggleItemStatus(item)" />
+          {{ item.nome }}
+          <button (click)="editItem(item)" class="btn btn-editar">Editar</button>
+          <button (click)="deleteItem(item)" class="btn btn-excluir"><i class="fas fa-trash"></i> Excluir</button>
+        </li>
+      </ul>
+  
+      <h2>Itens comprados</h2>
+      <ul>
+        <li *ngFor="let item of itensComprados">
+          <input type="checkbox" checked (change)="toggleItemStatus(item)" />
+          <span class="comprado">{{ item.nome }}</span>
+          <button (click)="editItem(item)" class="btn btn-editar">Editar</button>
+          <button (click)="deleteItem(item)" class="btn btn-excluir"><i class="fas fa-trash"></i> Excluir</button>
+        </li>
+      </ul>
+    </div>
+</div>

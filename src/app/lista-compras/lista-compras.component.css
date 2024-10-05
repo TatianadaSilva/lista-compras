@@ -1,0 +1,69 @@
+.container-lista {
+  background-color: #bb75fd; /* Cor lilás */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+  color: #ffffff; /* Cor branca para os títulos */
+}
+
+.secao-lista {
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none; /* Remove os marcadores da lista */
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #FFFFFF; /* Fundo branco para os itens da lista */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-adicionar {
+  background-color: #440363; /* Roxo escuro para o botão adicionar */
+  color: #eedddd; /* Texto em um tom claro */
+  border: none;
+  padding: 10px 20px; /* Aumenta o padding do botão */
+  border-radius: 5px; /* Arredonda as bordas do botão */
+}
+
+.btn-adicionar:hover {
+  background-color: #310531; /* Tom mais escuro no hover */
+}
+
+.btn-editar {
+  background-color: #421842; /* Roxo escuro para editar */
+  color: #FFFFFF; /* Texto branco */
+  border: none;
+  padding: 10px; /* Adiciona padding */
+  border-radius: 5px; /* Arredonda as bordas */
+}
+
+.btn-editar:hover {
+  background-color: #DDA0DD; /* Tom mais escuro no hover */
+}
+
+.btn-excluir {
+  background-color: #1d0331; /* Roxo escuro para excluir */
+  color: #FFFFFF; /* Texto branco */
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 10px; /* Adiciona padding */
+  border-radius: 5px; /* Arredonda as bordas */
+}
+
+.btn-excluir:hover {
+  background-color: #350535; /* Tom mais escuro no hover */
+}
